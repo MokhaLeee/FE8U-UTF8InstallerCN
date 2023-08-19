@@ -50,3 +50,9 @@ make -j
 ## Wizardry note
 
 Since Glyph use such a lot of space, so the custom FreeSpace from `0xB2A610` is not enough. So here we define `FreeFontSpace` as `0xEFB2E0` to install glyphs.
+
+## See also
+
+* [**FE-CBuild**](https://github.com/MokhaLeee/FE-CBuild), a project aims to insert everything through EA in C/Linux/Makefile.
+* [**CHAX-Sundry**](https://github.com/MokhaLeee/fe8_hacks_sundries), Mokha C-Hacks collection for FireEmblem8U.
+* [**FireEmblemUniverse/fireemblem8u**](https://github.com/FireEmblemUniverse/fireemblem8u), a decompilation of Fire Emblem: The Sacred Stones (US).
