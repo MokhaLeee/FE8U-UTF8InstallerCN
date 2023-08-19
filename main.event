@@ -1,0 +1,24 @@
+
+#ifndef FreeSpace
+    #define FreeSpace 0xB2A604
+    ORG FreeSpace
+#endif
+
+/* Include before tools helper */
+#include "Texts/Texts.event"
+
+
+#ifndef FreeFontSpace
+    // There is no enough space at B2A604
+    #define FreeFontSpace 0xEFB2E0
+    #define FreeFontSpaceSize 0xE4D20
+
+    ORG FreeFontSpace
+#endif
+
+#include "Fonts/Fonts.event"
+
+#ifdef FreeFontSpaceSize
+    MESSAGE Main size (CURRENTOFFSET - FreeFontSpace) max FreeFontSpaceSize
+    ASSERT (FreeFontSpace + FreeFontSpaceSize - CURRENTOFFSET)
+#endif
