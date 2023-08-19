@@ -6,6 +6,8 @@ This project is mainly refering to [FEHRR](https://github.com/laqieer/FEHRR)
 
 ## Custom build
 
+**You must have a linux environment such as WSL or ubuntu server.**
+
 1. Install sub-modules
 
 ```bash
