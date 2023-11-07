@@ -1,24 +1,18 @@
+#define USB_SPACE_2
 
-#ifndef FreeSpace
-    #define FreeSpace 0xB2A604
-    ORG FreeSpace
+#ifdef USB_SPACE_1
+    #define FreeSpaceEntry 0xAC7698
+    #define FreeSpaceEnd   0xB12614
+#else
+    #define FreeSpaceEntry 0xB84550
+    #define FreeSpaceEnd   0xC00000
 #endif
+
+ORG FreeSpaceEntry
 
 /* Include before tools helper */
 #include "Texts/Texts.event"
-
-
-#ifndef FreeFontSpace
-    // There is no enough space at B2A604
-    #define FreeFontSpace 0xEFB2E0
-    #define FreeFontSpaceSize 0xE4D20
-
-    ORG FreeFontSpace
-#endif
-
 #include "Fonts/Fonts.event"
 
-#ifdef FreeFontSpaceSize
-    MESSAGE Main size (CURRENTOFFSET - FreeFontSpace) max FreeFontSpaceSize
-    ASSERT (FreeFontSpace + FreeFontSpaceSize - CURRENTOFFSET)
-#endif
+MESSAGE END_AT CURRENTOFFSET
+ASSERT (FreeSpaceEnd - CURRENTOFFSET)

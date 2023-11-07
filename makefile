@@ -1,8 +1,8 @@
 MAKEFLAGS += --no-print-directory
 
 MAIN    := main.event
-FE8_CHX := fe8-chax.gba
-FE8_GBA := fe8.gba
+FE8_CHX := fireemblem8re-skillsys20220703-cn.gba
+FE8_GBA := fireemblem8re-skillsys20220703.gba
 
 TOOL_DIR := Tools
 LIB_DIR  := $(TOOL_DIR)/FE-CLib-Mokha
